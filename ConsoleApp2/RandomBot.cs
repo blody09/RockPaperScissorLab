@@ -4,22 +4,20 @@ using System.Text;
 
 namespace ConsoleApp2
 {
-    class RandomBot : Player
+    public class RandomBot : Player
     {
-
-        public override Roshambo generateRoshambo()
+        public RandomBot()
         {
-            Random roll = new Random();
-            int randomChoice = roll.Next(0, 3);
-            Roshambo[] choices = { Roshambo.rock, Roshambo.paper, Roshambo.scissors };
-            Roshambo randomSelection = choices[randomChoice];
-            return randomSelection;
+            Name = "Random Bot";
         }
 
-        public void printRoshambo()
+        public override string GenerateRoshambo()
         {
-            Roshambo botChoice = generateRoshambo();
-            Console.WriteLine(botChoice);
+            Random number = new Random();
+            int num = number.Next(1, 4);
+            RPS = Enum.GetName(typeof(Roshambo), num);
+            return RPS;
         }
     }
+
 }

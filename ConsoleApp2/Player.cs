@@ -4,15 +4,13 @@ using System.Text;
 
 namespace ConsoleApp2
 {
-    abstract class Player
+    public abstract class Player
     {
-        
         public string Name { get; set; }
+        public string RPS { get; set; }
 
-        public Roshambo Choice { get; set; }
+        public Player() { }
 
-
-        public abstract Roshambo generateRoshambo();
-           
+        public abstract string GenerateRoshambo();
     }
 }

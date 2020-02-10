@@ -4,25 +4,17 @@ using System.Text;
 
 namespace ConsoleApp2
 {
-    class RockBot : Player
+    public class RockBot : Player
     {
         public RockBot()
         {
-
+            Name = "Dopey";
         }
 
-        public string returnRoshamboAsString()
+        public override string GenerateRoshambo()
         {
-            Roshambo choice = generateRoshambo();
-            string roshString = choice.ToString();
-            return roshString;
-        }
-
-        //methods
-        public override Roshambo generateRoshambo()
-        {
-            Choice = Roshambo.rock;
-            return Choice;
+            RPS = Roshambo.Rock.ToString();
+            return RPS;
         }
     }
 }

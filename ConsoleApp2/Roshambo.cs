@@ -4,8 +4,8 @@ using System.Text;
 
 namespace ConsoleApp2
 {
-    enum Roshambo
+    public enum Roshambo
     {
-        rock,paper,scissors
+        Rock = 1, Paper, Scissors
     }
 }
